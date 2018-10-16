@@ -23,19 +23,19 @@ int main(){
         }
         scanf("%s", &buffer);
 
-        line = (char*)malloc(sizeof(char)*((strlen(buffer))+1));
+        line = (char*)malloc(sizeof(char)*((strlen(buffer))+1));       /* Aloca espa�o para a entrada de dados do shell */
 
         strcpy(line, buffer);
         line[strlen(buffer)] = '\0';
 
         free(buffer);
 
-        printf("%s\n", line);                                    /* Aloca espa�o para a entrada de dados do shell */
-		/*
+        printf("%s\n", line);                                    
+		
 		if(!strcmp(line, "sair")){
 			break;
 		}
-		*/
+		
 		args = (char**)malloc(sizeof(char)*3);                  /* Aloca espa�o para os ponteiros dos argumentos que ser�o
                                                             recebidos de '"char" *line' */
 		for(int i=0; i<3; i++){
